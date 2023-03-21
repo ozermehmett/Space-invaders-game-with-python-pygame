@@ -4,6 +4,7 @@ pygame.init()
 W, H = 700, 700
 BLACK = (0,0,0)
 screen = pygame.display.set_mode((W, H))
+score = 0
 bullet_fired = False
 game_over = False
 bullet_speed = 10
@@ -84,6 +85,7 @@ while True:
         if monster_rect.top > H:
             monster_list.remove(monster_rect)
         elif monster_rect.colliderect(konum):
+            score = 0
             gameover()
             monster_list.clear()
             bullet_fired = False
@@ -103,6 +105,7 @@ while True:
     for monster_rect in monster_list:
         if konumBullet.colliderect(monster_rect):
             monster_list.remove(monster_rect)
+            score += 1
             bullet_fired = False
             death.play()
             break
@@ -116,8 +119,9 @@ while True:
         konum.center = (W/2, H/2)
         game_over = False
         continue
-    
+    font = pygame.font.SysFont('Comic Sans MS', 30)
+    score_text = font.render(f"Score: {score}", True, (255, 255, 255))
+    screen.blit(score_text, (10,10))
     pygame.display.update()
     clock.tick(60)
-    
     
