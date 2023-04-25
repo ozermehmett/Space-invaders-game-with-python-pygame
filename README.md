@@ -3,9 +3,10 @@
 ## About
 This game was created using the 'pygame' libraries.
 
-## Screenshots:
-![111](https://user-images.githubusercontent.com/115498182/226647207-34762f95-73d7-4f54-a16c-8cc37b969e90.PNG)
-![222](https://user-images.githubusercontent.com/115498182/226647224-8a28ac7d-a304-4c7e-addf-e9aca1035954.PNG)
+## Video in game
+https://user-images.githubusercontent.com/115498182/234363940-8e028adf-72c8-48b5-bd6e-56ea246a0d81.mp4
+
+
 
 ## Did you find this repository helpful?
 Do not forget to give a start
